@@ -15,7 +15,7 @@ type GradingReport record {|
 |};
 
 // INFO: Pass a JSON such as {"studentId": "1874", "firstName": "Jane", "lastName":"Smith", "mathematics" : 85, "science" : 75, "arts":80} in the request body
-//       when invoking the grades resource function.
+// when invoking the grades resource function.
 service / on new http:Listener(8090) {
     resource function post average_grade(@http:Payload Student student) returns GradingReport => {
         studentId: student.studentId,
