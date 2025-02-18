@@ -30,5 +30,5 @@ public function main() returns error? {
 
     // Send the email
     string _ = check emailClient->sendEmail(email, emailSubject, generateWeatherTable(jsonList));
-    io:println("Successfully sent the email.");
+    io:println("Successfully sent the email");
 }
