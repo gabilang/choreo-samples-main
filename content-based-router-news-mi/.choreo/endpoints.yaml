@@ -1,8 +1,12 @@
-version: 1.0
+schemaVersion: "1.1"
 endpoints:
-  - name: NewsAPI
-    port: 8290
-    type: REST
-    networkVisibility: Public
-    context: /newsapi
-    schemaFilePath: news_openapi.yaml
+    - name: newsapi-b4b
+      displayName: NewsAPI
+      service:
+        basePath: /newsapi
+        port: 8290
+      type: REST
+      networkVisibilities:
+        - Project
+        - Public
+      schemaFilePath: news_openapi.yaml
