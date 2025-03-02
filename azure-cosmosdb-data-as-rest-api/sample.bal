@@ -40,5 +40,4 @@ service / on new http:Listener(8090) {
     isolated resource function delete employees/[string empId]() returns error? {
         _ = check cosmosClient->deleteDocument(databaseId, containerId, empId, empId);
     }
-
 }
