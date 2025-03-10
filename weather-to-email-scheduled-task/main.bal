@@ -19,7 +19,7 @@ public function main() returns error? {
 
     // Get the weather forecast for the next 24H
     http:Response response = check httpclient->/forecast(lat = latitude, lon = longitude, cnt = StepCount, appid = apiKey);
-    io:println("Successfully fetched the weather forecast data the next 24H");
+    io:println("Successfully fetched the weather forecast data the next 24H.");
 
     // Get the json payload from the response
     json jsonResponse = check response.getJsonPayload();
